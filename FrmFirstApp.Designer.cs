@@ -36,11 +36,11 @@
             this.BtnHello = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
             this.GrpMood = new System.Windows.Forms.GroupBox();
+            this.RdoSad = new System.Windows.Forms.RadioButton();
+            this.RdoHappy = new System.Windows.Forms.RadioButton();
             this.GrpOther = new System.Windows.Forms.GroupBox();
-            this.BtnHappy = new System.Windows.Forms.RadioButton();
-            this.BtnSad = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.PicHappy = new System.Windows.Forms.PictureBox();
             this.PicSad = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PicOne)).BeginInit();
@@ -111,14 +111,38 @@
             // 
             // GrpMood
             // 
-            this.GrpMood.Controls.Add(this.BtnSad);
-            this.GrpMood.Controls.Add(this.BtnHappy);
+            this.GrpMood.Controls.Add(this.RdoSad);
+            this.GrpMood.Controls.Add(this.RdoHappy);
             this.GrpMood.Location = new System.Drawing.Point(620, 70);
             this.GrpMood.Name = "GrpMood";
             this.GrpMood.Size = new System.Drawing.Size(147, 159);
             this.GrpMood.TabIndex = 6;
             this.GrpMood.TabStop = false;
             this.GrpMood.Text = "Moods";
+            // 
+            // RdoSad
+            // 
+            this.RdoSad.AutoSize = true;
+            this.RdoSad.Location = new System.Drawing.Point(16, 63);
+            this.RdoSad.Name = "RdoSad";
+            this.RdoSad.Size = new System.Drawing.Size(54, 21);
+            this.RdoSad.TabIndex = 1;
+            this.RdoSad.TabStop = true;
+            this.RdoSad.Text = "Sad";
+            this.RdoSad.UseVisualStyleBackColor = true;
+            this.RdoSad.CheckedChanged += new System.EventHandler(this.BtnSad_CheckedChanged);
+            // 
+            // RdoHappy
+            // 
+            this.RdoHappy.AutoSize = true;
+            this.RdoHappy.Location = new System.Drawing.Point(16, 25);
+            this.RdoHappy.Name = "RdoHappy";
+            this.RdoHappy.Size = new System.Drawing.Size(70, 21);
+            this.RdoHappy.TabIndex = 0;
+            this.RdoHappy.TabStop = true;
+            this.RdoHappy.Text = "Happy";
+            this.RdoHappy.UseVisualStyleBackColor = true;
+            this.RdoHappy.CheckedChanged += new System.EventHandler(this.BtnHappy_CheckedChanged);
             // 
             // GrpOther
             // 
@@ -131,29 +155,16 @@
             this.GrpOther.TabStop = false;
             this.GrpOther.Text = "groupBox1";
             // 
-            // BtnHappy
+            // radioButton4
             // 
-            this.BtnHappy.AutoSize = true;
-            this.BtnHappy.Location = new System.Drawing.Point(16, 25);
-            this.BtnHappy.Name = "BtnHappy";
-            this.BtnHappy.Size = new System.Drawing.Size(70, 21);
-            this.BtnHappy.TabIndex = 0;
-            this.BtnHappy.TabStop = true;
-            this.BtnHappy.Text = "Happy";
-            this.BtnHappy.UseVisualStyleBackColor = true;
-            this.BtnHappy.CheckedChanged += new System.EventHandler(this.BtnHappy_CheckedChanged);
-            // 
-            // BtnSad
-            // 
-            this.BtnSad.AutoSize = true;
-            this.BtnSad.Location = new System.Drawing.Point(16, 63);
-            this.BtnSad.Name = "BtnSad";
-            this.BtnSad.Size = new System.Drawing.Size(54, 21);
-            this.BtnSad.TabIndex = 1;
-            this.BtnSad.TabStop = true;
-            this.BtnSad.Text = "Sad";
-            this.BtnSad.UseVisualStyleBackColor = true;
-            this.BtnSad.CheckedChanged += new System.EventHandler(this.BtnSad_CheckedChanged);
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(23, 71);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(110, 21);
+            this.radioButton4.TabIndex = 1;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "radioButton4";
+            this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // radioButton3
             // 
@@ -165,17 +176,6 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "radioButton3";
             this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(23, 71);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(110, 21);
-            this.radioButton4.TabIndex = 1;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "radioButton4";
-            this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // PicHappy
             // 
@@ -243,8 +243,8 @@
         private System.Windows.Forms.Button BtnExit;
         private System.Windows.Forms.GroupBox GrpMood;
         private System.Windows.Forms.GroupBox GrpOther;
-        private System.Windows.Forms.RadioButton BtnSad;
-        private System.Windows.Forms.RadioButton BtnHappy;
+        private System.Windows.Forms.RadioButton RdoSad;
+        private System.Windows.Forms.RadioButton RdoHappy;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.PictureBox PicHappy;
